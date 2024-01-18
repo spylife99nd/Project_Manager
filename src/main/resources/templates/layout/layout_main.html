@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="admin dashboard" />
+    <meta name="description" content="Admin Lite " />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Admin</title>
+    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/img/images/favicon.png}" />
+    <link type="text/css" th:href="@{/css/libs/flot/css/float-chart.css}" rel="stylesheet" />
+    <link type="text/css" th:href="@{/css/libs/select2/dist/css/select2.min.css}" rel="stylesheet"/>
+    <link type="text/css" th:href="@{/css/libs/jquery-minicolors/jquery.minicolors.css}" rel="stylesheet"/>
+    <link type="text/css" th:href="@{/css/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css}" rel="stylesheet"/>
+    <link type="text/css" th:href="@{/css/libs/quill/dist/quill.snow.css}" rel="stylesheet"/>
+    <link type="text/css" th:href="@{/css/css/style.min.css}" rel="stylesheet" />
+
+</head>
+<body>
+<div
+        id="main-wrapper"
+        data-layout="vertical"
+        data-navbarbg="skin5"
+        data-sidebartype="full"
+        data-sidebar-position="absolute"
+        data-header-position="absolute"
+        data-boxed-layout="full"
+>
+    <header th:replace="~{fragments/header.html}"></header>
+    <aside th:replace="~{fragments/side_bar.html}"></aside>
+    <div layout:fragment="content"></div>
+</div>
+
+<div th:replace="~{fragments/script.html :: scripts}"></div>
+</body>
+</html>
